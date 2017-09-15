@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.didispace.swagger.EnableSwagger2Doc;
 
-@EnableSwagger2Doc
+ 
+@EnableSwagger2Doc 
 @SpringBootApplication 
 public class TestplatApplication {
 

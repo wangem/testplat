@@ -2,6 +2,8 @@ package com.answern.testplat.demo.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +27,8 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("demo")
 public class DemoController {
 	
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private DemoService demoService;
 	
@@ -32,6 +36,7 @@ public class DemoController {
 	@ResponseBody
 	@RequestMapping(value = "index" ,method = RequestMethod.GET)
 	public String index() {
+		logger.debug("这里是一个logger");
 		return "this is index";
 	}
 	@ApiOperation(value="Mybatis查询所有", notes="查询所有的数据列表")
